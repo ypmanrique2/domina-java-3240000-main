@@ -37,7 +37,7 @@ public class Persona implements Comparable<Persona>
         }
         
         int compEdad = fechaNacimiento.compareTo(otra.fechaNacimiento);
-        return -compEdad; // consideramos menor al de mayor fecha de nacimiento
+        return -compEdad; // consideramos menor al de mayor fecha de nacimiento o más reciente
     }
 
 	@Override
