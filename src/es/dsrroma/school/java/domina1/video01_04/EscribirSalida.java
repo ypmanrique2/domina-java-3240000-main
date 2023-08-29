@@ -13,12 +13,14 @@ public class EscribirSalida {
 
 	public static void main(String[] args) {
 		try(
-				Scanner s = new Scanner(new File("entrada.txt"));
+				Scanner s = new Scanner(new File("./entrada.txt"));
 				FileOutputStream fos = new FileOutputStream("salida.txt")
 			) {
 			List<Dato> leidos = LeerEntrada.leerDatos(s);
 			for (Dato dato : leidos) {
-				String linea = dato.getFecha() + ";" + dato.getNombre() + ";" + dato.getSueldo() + "\n";
+				String linea = dato.getFecha() + ";" 
+					+ dato.getNombre() + ";" 
+					+ dato.getSueldo() + "\n";
 				fos.write(linea.getBytes());
 			}
 			System.out.println("Ya está, mira el fichero de salida...");
