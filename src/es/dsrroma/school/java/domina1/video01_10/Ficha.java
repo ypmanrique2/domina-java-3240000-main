@@ -35,7 +35,7 @@ public class Ficha
     @Override
     public String toString() {
         return "soy una ficha " + nombre + " (" + num + ") de "
-            + fecha + " con \n\t" + coleccion; //.size() + " fichas";
+            + fecha + " con \n\t" + coleccion.size() + " fichas";
     }
     
     private void addFicha(Ficha ficha) {
